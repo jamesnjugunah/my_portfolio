@@ -1,0 +1,38 @@
+// Define variables
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+
+// Define styles for the body element
+body {
+    font-family: Arial, sans-serif;
+    background-color: $secondary-color;
+    color: $primary-color;
+}
+
+// Define styles for headings
+h1, h2, h3 {
+    color: $primary-color;
+}
+
+// Define styles for links
+a {
+    color: $primary-color;
+    text-decoration: none;
+    
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+// Define styles for buttons
+.button {
+    padding: 10px 20px;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    cursor: pointer;
+    
+    &:hover {
+        background-color: darken($primary-color, 10%);
+    }
+}

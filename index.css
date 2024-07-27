@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+body {
+    background-color:#06011a;
+}
+ /* header css code*/
+
+.header{
+    background-color: #120838;
+    position: fixed;
+    width: 100%;
+    height:10%;
+    position: fixed;
+ 
+}
+.nav_links {
+    display:flex;
+    list-style-type: none;
+    position:absolute;
+    right:10px;
+    top:10px;
+
+}
+.nav_links li a {
+    text-decoration: none;
+    color:red;
+
+}
+.nav_links li {
+    padding: 18px 10px;
+    margin-right: 10px;
+    color:red;
+
+}
+.nav_links li:hover {
+    color:red;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.title {
+    color:rgb(250, 247, 247);
+    position:absolute;
+    top:10px;
+    left:10px;
+
+}
+/* main_content css code */
+.main_content {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    color: rgb(73, 10, 10);
+    font-size: 1rem;
+
+}
+
+
+.dev {
+    margin-left:10px;
+    margin-top: 10px;
+    color:rgb(255, 0, 0);
+    font-size: 1.5rem;
+}
+
+.right_content img {
+    border-radius:0% 100% 0% 100% / 67% 29% 71% 33%;
+    width:300px;
+    height:650px;
+    position:absolute;
+    left:60%;
+    top:-5px;
+}
+.left_content {
+    background-color: transparent;
+    position:relative;
+    left:30%;
+    margin-top: 10px;
+    text-align: left;
+}
+.left_content h1 {
+    font-size: 2rem;
+    color:rgb(252, 247, 247);
+    margin-bottom: 15px;
+}
+.left_content p {
+    font-size: 1.5rem;
+    color:rgb(255, 0, 0);
+    margin-bottom: 70px;
+}
+.cv {
+    text-decoration: none;
+    color:red;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.cv:hover {
+    background-color: red;
+    color: white;
+    border-radius: 0px;
+    transform: translate(5px);
+    transition: all 0.5s  ease;;
+}
+.cv:hover {
+    background-color: red;
+    color: white;
+    border-radius: 0px;
+    transform: translate(5px);
+    transition: all 0.5s  ease;;
+}
+.socials{
+    display: inline;
+    justify-content: space-between;
+    width: 200px;
+    margin-top: 20px;
+    margin-left: 100px;
+    position:relative;
+    left: 70px;
+    top:200px;
+}
+.socials ul{ 
+    list-style-type: none;
+    display: flex;
+}
+.socials ul li {
+    margin-right: 10px;
+}
+.socials ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    background-color: red;
+    padding: 10px 15px;
+    border-radius: 50%;
+}

@@ -1,0 +1,129 @@
+/*About Me css code*/
+/* header*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+ /* header css code*/
+
+.header{
+    background-color: #120838;
+    position: absolute;
+    top:0px;
+    width: 100%;
+    height:10%;
+    position: fixed;
+ 
+}
+.nav_links {
+    display:flex;
+    list-style-type: none;
+    position:absolute;
+    right:10px;
+    top:10px;
+
+}
+.nav_links li a {
+    text-decoration: none;
+    color:red;
+
+}
+.nav_links li {
+    padding: 18px 10px;
+    margin-right: 10px;
+    color:red;
+
+}
+.nav_links li:hover {
+    color:red;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.title {
+    color:rgb(250, 247, 247);
+    position:absolute;
+    top:10px;
+    left:10px;
+
+}
+/* about*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #100120;
+}
+.About{
+    background: rgb(3, 1, 29);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+}
+.About img {
+    border-radius: 50%;
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+.About h1 {
+    font-size: 2.5em;
+    color:red;
+    margin-bottom: 10px;
+}
+.About p {
+    font-size: 1.2em;
+    color: #fcf9f9;
+    margin-bottom: 20px;
+}
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.skill {
+    background:transparent;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 2em;
+}
+.skill :hover {
+    transform:translate(5px)
+}
+@media (max-width: 600px) {
+    .About {
+        padding: 10px;
+    }
+    .About h1 {
+        font-size: 2em;
+    }
+    .About p {
+        font-size: 1em;
+    }
+    .skills {
+        flex-direction: column;
+    }
+    .skill {
+        width: 100%;
+        justify-content: center;
+        padding: 10px 0;
+    }
+}

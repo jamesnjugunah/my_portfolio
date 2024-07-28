@@ -1,4 +1,4 @@
-/*header css code*/
+/*header*/
 *{
     margin: 0;
     padding: 0;
@@ -48,58 +48,82 @@
     left:10px;
 
 }
-/*testimonials css code*/
+/* styles.css */
+
 body {
     font-family: Arial, sans-serif;
+    background-color: #0c022e;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background-color:#06011a;
+    padding: 20px;
     margin: 0;
 }
-.container {
-    max-width: 600px;
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
     width: 100%;
-    padding: 20px;
-    background: transparent;
+    justify-content: center;
+}
+
+.project {
+    background: rgb(6, 6, 78);
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    color:white;
+    box-shadow: 0 0 10px rgba(66, 70, 128, 0.1);
+    overflow: hidden;
+    width: 300px;
+    height:250px;
     text-align: center;
-    position: relative;
-    border-top: calc(5px + 0.5vw) solid #007BFF;
-}
-.testimonial {
-    display: none;
+    display: flex;
     flex-direction: column;
-    align-items: center;
-}
-.testimonial.active {
-    display: flex;
-}
-.testimonial img {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-.testimonial p {
-    font-size: 1.2em;
-    color: #faf9f9;
-    margin-bottom: 10px;
-}
-.testimonial h3 {
-    font-size: 1.5em;
-    color: #ff0000;
-    margin-bottom: 10px;
-}
-.buttons {
-    display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    position: absolute;
+    top:15%;
+    left:50px;
+    align-items: center;
+    animation-name:animatedProject;
+    animation-delay: 0s;
+    animation-duration: 1s;
 }
-.buttons button {
+.project:hover {
+    transform:translate(0px, -10px);
+    transition:all 0.5s ease-in;
+}
+@keyframes animateProject {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}
+
+.project img {
+    width: 40%;
+    height: 50%;
+    margin-top: 10px;
+    border-radius: 50%;
+    
+}
+
+.project-info {
+    padding: 15px;
+}
+
+.project-info p {
+    margin-bottom: 10px;
+    margin-top: -40px;
+    color: #fffdfd;
+}
+
+.project-info button {
     background: #007BFF;
     color: white;
     border: none;
@@ -108,9 +132,7 @@ body {
     cursor: pointer;
     transition: background 0.3s;
 }
-.buttons button:hover {
-    background: #274a6e;
-    border-radius: 0px;
-    transform: translate(5px);
-    transition:all 0.5s ease;
+
+.project-info button:hover {
+    background: #0056b3;
 }

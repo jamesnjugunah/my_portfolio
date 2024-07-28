@@ -76,9 +76,9 @@ body {
     margin-top: 20px;
 }
 .About img {
-    border-radius: 50%;
-    width: 200px;
-    height: 250px;
+    border-radius: 98% 100% 0% 0% / 100% 100% 100% 98%  ;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     margin-bottom: 20px;
 }

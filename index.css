@@ -5,16 +5,18 @@
     font-family: 'Times New Roman', Times, serif;
 }
 body {
-    background-color:#06011a;
+    background: rgb(41,13,142);
+    background: linear-gradient(180deg, rgba(41,13,142,1) 11%, rgba(11,1,43,1) 51%);
 }
  /* header css code*/
 
 .header{
-    background-color: #120838;
+    background-color: transparent;
     position: fixed;
     width: 100%;
     height:10%;
     position: fixed;
+    z-index: 1000;
  
 }
 .nav_links {
@@ -30,16 +32,19 @@ body {
     color:red;
 
 }
+
 .nav_links li {
     padding: 18px 10px;
     margin-right: 10px;
     color:red;
 
 }
-.nav_links li:hover {
-    color:red;
+.nav_links li a:hover {
+    color:black;
+    width:50px;
+    height:50px;
     background-color: white;
-    border-radius: 5px;
+    border-radius:50% 50% 50% 51% / 20% 20% 20% 20% ;
 }
 
 .title {
@@ -47,8 +52,26 @@ body {
     position:absolute;
     top:10px;
     left:10px;
+    font-size: 40px;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
 
 }
+
+  
+
+  
+@keyframes glow {
+    from {
+      text-shadow: 0 0 10px #080202, 0 0 20px #0c0909, 0 0 30px #080607, 0 0 40px #070506, 0 0 50px #0a0809, 0 0 60px #070405, 0 0 70px #490101;
+    }
+    to {
+      text-shadow: 0 0 20px #0e0505, 0 0 30px #0c080a, 0 0 40px #0a0407, 0 0 50px #161214, 0 0 60px #0e0a0c, 0 0 70px #050304, 0 0 80px #360101;
+    }
+  }
+  
 /* main_content css code */
 .main_content {
     display: flex;
@@ -56,7 +79,21 @@ body {
     height: 100vh;
     color: rgb(73, 10, 10);
     font-size: 1rem;
+    animation: myAnim 2s ease 0s 1 normal forwards;
 
+}
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+		transform: rotateX(-100deg);
+		transform-origin: top;
+	}
+
+	100% {
+		opacity: 1;
+		transform: rotateX(0deg);
+		transform-origin: top;
+	}
 }
 
 
@@ -74,6 +111,10 @@ body {
     position:absolute;
     left:60%;
     top:-5px;
+}
+.right_content img:hover {
+    transform: translate3d(10px, -10px, 0px);
+    transition: all 0.5s ease;
 }
 .left_content {
     background-color: transparent;
@@ -129,6 +170,11 @@ body {
 }
 .socials ul li {
     margin-right: 10px;
+}
+.socials ul li:hover {
+    transform: scale(1.2);
+    transition: all 0.5s ease;
+
 }
 .socials ul li a {
     text-decoration: none;

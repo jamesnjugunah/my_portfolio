@@ -9,7 +9,7 @@
  /* header css code*/
 
 .header{
-    background-color: #120838;
+    background-color: transparent;
     position: absolute;
     top:0px;
     width: 100%;
@@ -47,8 +47,20 @@
     position:absolute;
     top:10px;
     left:10px;
-
+    font-size: 40px;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
 }
+@keyframes glow {
+    from {
+      text-shadow: 0 0 10px #080202, 0 0 20px #0c0909, 0 0 30px #080607, 0 0 40px #070506, 0 0 50px #0a0809, 0 0 60px #070405, 0 0 70px #490101;
+    }
+    to {
+      text-shadow: 0 0 20px #0e0505, 0 0 30px #0c080a, 0 0 40px #0a0407, 0 0 50px #161214, 0 0 60px #0e0a0c, 0 0 70px #050304, 0 0 80px #360101;
+    }
+  }
 /* about*/
 
 body {
@@ -60,10 +72,12 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #100120;
+    background: rgb(41,13,142);
+    background: linear-gradient(180deg, rgba(41,13,142,1) 11%, rgba(11,1,43,1) 51%);
 }
 .About{
-    background: rgb(3, 1, 29);
+    background: rgb(11,1,43);
+    background: linear-gradient(180deg, rgba(11,1,43,1) 43%, rgba(41,13,142,1) 89%);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -74,12 +88,38 @@ body {
     align-items: center;
     text-align: center;
     margin-top: 20px;
+    animation: myAnime 2s ease 0s 1 normal forwards;
+    animation: myAnim 2s ease 0s 1 normal forwards;
+}
+.About:hover {
+    transform: translate(5px);
+}
+@keyframes myAnime {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+
+	100% {
+		opacity: 0;
+		transform: scale(0.6);
+	}
+}
+@keyframes myAnim {
+	0% {
+		transform: scale(0.5);
+	}
+
+	100% {
+		transform: scale(1);
+	}
 }
 .About img {
-    border-radius: 98% 100% 0% 0% / 100% 100% 100% 98%  ;
+    border-radius: 30% 70% 100% 0% / 0% 0% 100% 100% ;
     width: 150px;
     height: 150px;
     object-fit: cover;
+    scale:calc(0.8);
     margin-bottom: 20px;
 }
 .About h1 {

@@ -6,9 +6,8 @@
     font-family: 'Times New Roman', Times, serif;
 }
  /* header css code*/
-
-.header{
-    background-color: #120838;
+ .header{
+    background-color: transparent;
     position: absolute;
     top:0px;
     width: 100%;
@@ -20,25 +19,28 @@
     display:flex;
     list-style-type: none;
     position:absolute;
-    right:10px;
+    right: 100px;
     top:10px;
-
 }
 .nav_links li a {
     text-decoration: none;
-    color:red;
-
+    color:white;
+    font-size: larger;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
 .nav_links li {
     padding: 18px 10px;
     margin-right: 10px;
-    color:red;
+    color:black;
 
 }
-.nav_links li:hover {
+.nav_links li a:hover {
     color:red;
-    background-color: white;
     border-radius: 5px;
+    transform:translateX(5px);
+    transition: all 0.5s ease;
+    text-decoration: underline;
 }
 
 .title {
@@ -46,71 +48,126 @@
     position:absolute;
     top:10px;
     left:10px;
-
+    font-size: 40px;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
 }
+@keyframes glow {
+    from {
+      text-shadow: 0 0 10px #080202, 0 0 20px #0c0909, 0 0 30px #080607, 0 0 40px #070506, 0 0 50px #0a0809, 0 0 60px #070405, 0 0 70px #490101;
+    }
+    to {
+      text-shadow: 0 0 20px #0e0505, 0 0 30px #0c080a, 0 0 40px #0a0407, 0 0 50px #161214, 0 0 60px #0e0a0c, 0 0 70px #050304, 0 0 80px #360101;
+    }
+  }
 /*testimonials css code*/
 body {
+    background: rgb(255,254,238);
+    background: linear-gradient(0deg, #69532f 0%, rgba(2,1,5,1) 50%);
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color:#06011a;
     margin: 0;
 }
 .container {
-    max-width: 600px;
-    width: 100%;
-    padding: 20px;
-    background: transparent;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    text-align: center;
-    position: relative;
-    border-top: calc(5px + 0.5vw) solid #007BFF;
+    position: absolute;
+    top:25%;
+    animation: myAnim 2s ease 0s 1 alternate backwards;
+    height: 500px;
+    width: 800px;
+    margin-left: 100px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+		transform: scale(1.4);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
 }
 .testimonial {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-}
-.testimonial.active {
-    display: flex;
+    height: 500px;
+    width: 800px;
+    position: relative;
+    float: left;
 }
 .testimonial img {
     border-radius: 50%;
+    margin-left: 45%;
     width: 100px;
     height: 100px;
     object-fit: cover;
     margin-bottom: 10px;
 }
 .testimonial p {
-    font-size: 1.2em;
-    color: #faf9f9;
+    font-size: 1.5em;
+    color: white;
+    opacity: 1;
     margin-bottom: 10px;
+    text-align: center;
 }
 .testimonial h3 {
     font-size: 1.5em;
     color: #ff0000;
+    margin-left: 42%;
     margin-bottom: 10px;
 }
-.buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+
+/*---------- SLIDE ANIMATION --------------*/
+
+
+@keyframes slide_animation{
+    0% {left:0px;}
+    10% {left:0px;}
+    20% {left:800px;}
+    30% {left:800px;}
+    40% {left: 1600px;}
+    50% {left: 1600px;}
+    60% {left: 800px;}
+    70% {left: 800px;}
+    80% {left: 0px;}
+    90% {left: 0px;}
+    100% {left:0px;}
 }
-.buttons button {
-    background: #007BFF;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
+
+@-webkit-keyframes slide_animation{
+    0% {left:0px;}
+    10% {left:0px;}
+    20% {left:800px;}
+    30% {left:800px;}
+    40% {left: 1600px;}
+    50% {left: 1600px;}
+    60% {left: 800px;}
+    70% {left: 800px;}
+    80% {left: 0px;}
+    90% {left: 0px;}
+    100% {left:0px;}
 }
-.buttons button:hover {
-    background: #274a6e;
-    border-radius: 0px;
-    transform: translate(5px);
-    transition:all 0.5s ease;
+
+.slide{
+    width: 2400px;
+    height: 500px;
+    margin: 0 0 0 -1600px;
+    position: relative;
+    -webkit-animation-name: slide_animation;
+    animation-name: slide_animation;
+    -webkit-animation-duration: 33s;
+    animation-duration: 33s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
 }
+
+

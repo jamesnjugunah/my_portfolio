@@ -5,8 +5,8 @@
     font-family: 'Times New Roman', Times, serif;
 }
 body {
-    background: rgb(41,13,142);
-    background: linear-gradient(180deg, rgba(41,13,142,1) 11%, rgba(11,1,43,1) 51%);
+    background: rgb(255,254,238);
+    background: linear-gradient(0deg, #69532f 0%, rgba(2,1,5,1) 50%);
 }
  /* header css code*/
 
@@ -23,28 +23,28 @@ body {
     display:flex;
     list-style-type: none;
     position:absolute;
-    right:10px;
+    right: 100px;
     top:10px;
-
 }
 .nav_links li a {
     text-decoration: none;
-    color:red;
-
+    color:white;
+    font-size: larger;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .nav_links li {
     padding: 18px 10px;
     margin-right: 10px;
-    color:red;
+    color:black;
 
 }
 .nav_links li a:hover {
-    color:black;
-    width:50px;
-    height:50px;
-    background-color: white;
-    border-radius:50% 50% 50% 51% / 20% 20% 20% 20% ;
+    color:red;
+    border-radius: 5px;
+    transform:translateX(5px);
+    transition: all 0.5s ease;
+    text-decoration: underline;
 }
 
 .title {

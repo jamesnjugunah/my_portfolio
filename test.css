@@ -79,7 +79,7 @@ body {
     animation: myAnim 2s ease 0s 1 alternate backwards;
     height: 500px;
     width: 800px;
-    margin-left: 100px;
+    margin-left: 0px;
     margin-top: 20px;
     overflow: hidden;
 }
@@ -95,10 +95,14 @@ body {
 	}
 }
 .testimonial {
-    height: 500px;
+    height: 400px;
+    padding-top: 10px;
+    border-radius: 10px;
     width: 800px;
     position: relative;
     float: left;
+    background: rgb(105,83,47);
+    background: linear-gradient(180deg, rgba(105,83,47,1) 0%, rgba(4,3,1,1) 57%);
 }
 .testimonial img {
     border-radius: 50%;
@@ -168,6 +172,16 @@ body {
     animation-direction: alternate;
     -webkit-animation-play-state: running;
     animation-play-state: running;
+}
+.heading {
+    color: red;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+    position:absolute;
+    left:44%;
+    top:15%;
+    animation: myAnim 2s ease 0s 1 alternate backwards;
 }
 
 
